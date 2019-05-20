@@ -11,8 +11,7 @@ public class AVLTree<K, V> implements AVLTreeI<K, V> {
 		int height;
 		Node<K,V> left;
 		Node<K,V> right;
-		Node<K,V> parent;
-
+		
 		public Node(K key, V value) {
 			this.key=key;
 			this.value=value;
