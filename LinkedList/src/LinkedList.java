@@ -9,6 +9,8 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 // do not import anything else.
 
+
+
 public class LinkedList<E> implements ListI<E>, Comparable<E>{
 	
 	
@@ -178,6 +180,20 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 			}
 			return false;
 			}
+		
+		@SuppressWarnings("unchecked")
+		public E returnMinValue() {
+			if(head==null) return null;
+			Node<E> current = head;
+			E temp = current.data;
+			while(current!=null) {
+			if(((Comparable <E>)current.data).compareTo(temp)<0) {
+				temp = current.data;
+			}
+			  current=current.next;
+			}
+			return temp;
+		}
 
 		@Override
 		public Iterator<E> iterator() {        // Lets us write nice compact for loops
