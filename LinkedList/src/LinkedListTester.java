@@ -31,47 +31,7 @@ public class LinkedListTester {
 	 * and fill it with Integers.
 	 */
 	public static void main(String[] args) {
-		
-		cal1 = new Calculator();
-		
-		System.out.println(cal1.calculate("2234", "+", "97786"));
-		System.out.println(cal1.calculate("-44522", "+", "-22233"));
-		
-		System.out.println(cal1.calculate("-4455522", "+", "-22233"));
-
-		System.out.println(cal1.calculate("-4455522", "+", "-224486233"));
-		
-		System.out.println(cal1.calculate("4552", "-", "2639"));
-		
-		System.out.println(cal1.calculate("94552", "-", "2639") + "  7");
-		System.out.println(cal1.calculate("2639", "-", "94552") + "  8");
-		System.out.println(cal1.calculate("-2639", "-", "-94552") + "  9");
-		System.out.println(cal1.calculate("-2639", "-", "94552") + "  10");
-		
-		
-		System.out.println(cal1.calculate("-94552", "+", "2639"));
-		System.out.println(cal1.calculate("-2639", "+", "94552"));
-		System.out.println(cal1.calculate("2639", "+", "-94552"));
-		System.out.println(cal1.calculate("94552", "+", "-2639"));
-		
-		System.out.println(cal1.calculate("45", "*", "3"));
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
+	
 		boolean error = false;
 		try {
 			llist = new LinkedList<Integer>();
