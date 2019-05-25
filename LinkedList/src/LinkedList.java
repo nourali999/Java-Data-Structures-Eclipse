@@ -173,7 +173,7 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 		public boolean contains(E obj) {        // checks if the element is part of the list.
 			Node<E> temp = head;
 			while(temp!=null) {
-			if(((Comparable<E>) head.data).compareTo(obj)==0) 
+			if(((Comparable<E>) temp.data).compareTo(obj)==0) 
 			return true;
 			temp=temp.next;
 			}
@@ -181,7 +181,7 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 			}
 		
 		@SuppressWarnings("unchecked")
-		public E returnMinValue() {
+		public E returnMinValue() {				// Returns Minimum Value in List
 			if(head==null) return null;
 			Node<E> current = head;
 			E temp = current.data;
@@ -193,6 +193,12 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 			}
 			return temp;
 		}
+		
+		
+		
+		
+		
+		
 
 		@Override
 		public Iterator<E> iterator() {        // Lets us write nice compact for loops
