@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
  * @author
  *
  */
-public class LinkedList<E> implements HashListI<E> {
+public class LinkList<E> implements HashListI<E> {
 	
 	/* Our Node<E> class will be an inner class.
 	 * It has two components. A pointer that points
@@ -70,7 +70,7 @@ public class LinkedList<E> implements HashListI<E> {
 
 	
 
-		public LinkedList() {  // Our class constructor sets head and tail to null and currentSize to 0.
+		public LinkList() {  // Our class constructor sets head and tail to null and currentSize to 0.
 			head=null;
 			tail=null;
 			currentSize=0;

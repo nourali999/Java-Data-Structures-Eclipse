@@ -70,8 +70,6 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 		tail=newNode;
 		currentSize++;
 	}
-
-
 	@Override
 	public E removeFirst() {	//Removes the first element in the list
 		if(head==null) return null;

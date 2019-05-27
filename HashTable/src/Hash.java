@@ -28,7 +28,7 @@ public class Hash<K, V> implements HashI<K, V> {
 			return (((Comparable<K>) this.key).compareTo(o.key));
 		}
 	}
-    LinkedList<HashElement<K,V>>[] harray;
+    LinkList<HashElement<K,V>>[] harray;
 	int tableSize;
 	int numElements;
 	double maxLoadFactor;
@@ -39,9 +39,9 @@ public class Hash<K, V> implements HashI<K, V> {
 		maxLoadFactor=0.75;
 		numElements=0;
 		// Creates and array of LinkedLists that are initialized with HashElement objects
-		harray =(LinkedList<HashElement<K,V>> []) new LinkedList[tableSize];
+		harray =(LinkList<HashElement<K,V>> []) new LinkList[tableSize];
 			for(int i =0; i<tableSize;i++) {
-				harray[i]= new LinkedList<HashElement<K,V>>();
+				harray[i]= new LinkList<HashElement<K,V>>();
 			}
 	}
 
@@ -169,9 +169,9 @@ public class Hash<K, V> implements HashI<K, V> {
 	@Override
 	public void resize(int newSize) {
 		// Doubles the size of the array
-	LinkedList<HashElement<K,V>>[] new_array = (LinkedList<HashElement<K,V>>[]) new LinkedList[newSize];
+	LinkList<HashElement<K,V>>[] new_array = (LinkList<HashElement<K,V>>[]) new LinkList[newSize];
 	for(int i=0; i<newSize;i++) {
-		new_array[i] = new LinkedList<HashElement<K,V>>();
+		new_array[i] = new LinkList<HashElement<K,V>>();
 	}
 	for(K key: this) {
 		// gets every key and rehashes on the new tableSize
