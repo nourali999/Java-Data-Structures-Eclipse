@@ -34,6 +34,7 @@ public class LinkedListTester {
 	
 		boolean error = false;
 		try {
+			
 			llist = new LinkedList<Integer>();
 			
 			// add n elements to the list
