@@ -107,6 +107,35 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 		return temp;
 	}
 
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public boolean contains(E obj) {        // checks if the element is part of the list.
+		Node<E> temp = head;
+		while(temp!=null) {
+			if(((Comparable<E>) temp.data).compareTo(obj)==0) 
+				return true;
+			temp=temp.next;
+		}
+		return false;
+	}
+
+	@SuppressWarnings("unchecked")
+	public E returnMinValue() {				// Returns Minimum Value in List
+		if(head==null) return null;
+		Node<E> current = head;
+		E temp = current.data;
+		while(current!=null) {
+			if(((Comparable <E>)current.data).compareTo(temp)<0) {
+				temp = current.data;
+			}
+			current=current.next;
+		}
+		return temp;
+	}
+
+	
+
 	@Override
 	public E peekFirst() {				//peeks at the fist element in our list
 		if(head==null) 	return null;   
@@ -139,38 +168,6 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 	public int size() {			// returns the number of elements in the list
 		return currentSize;
 	}
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public boolean contains(E obj) {        // checks if the element is part of the list.
-		Node<E> temp = head;
-		while(temp!=null) {
-			if(((Comparable<E>) temp.data).compareTo(obj)==0) 
-				return true;
-			temp=temp.next;
-		}
-		return false;
-	}
-
-	@SuppressWarnings("unchecked")
-	public E returnMinValue() {				// Returns Minimum Value in List
-		if(head==null) return null;
-		Node<E> current = head;
-		E temp = current.data;
-		while(current!=null) {
-			if(((Comparable <E>)current.data).compareTo(temp)<0) {
-				temp = current.data;
-			}
-			current=current.next;
-		}
-		return temp;
-	}
-
-
-
-
-
-
 
 	@Override
 	public Iterator<E> iterator() {        // Lets us write nice compact for loops

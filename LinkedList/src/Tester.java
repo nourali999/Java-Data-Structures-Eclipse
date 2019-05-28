@@ -13,7 +13,7 @@ public class Tester {
 			list.addFirst(i);
 			
 		}
-		// adds -5,-7,-2 to list
+	   // adds -5,-7,-2 to the beginning of our list
 			list.addFirst(-7);
 			list.addFirst(-2);
 			list.addFirst(-5);
@@ -23,12 +23,12 @@ public class Tester {
 			System.out.print(" " + obj);
 			
 		}
-		
+		System.out.print("\n");
 		//Returns Minimum Value in List
-		System.out.println("\n"+list.returnMinValue()+"\n");
+		System.out.println("The minimum value is: "+list.returnMinValue());
 		
 		//Returns True if List Contains Object
-		System.out.println(list.contains(20)+"\n");
+		System.out.println("Does the list contain 20: "+list.contains(20)+"\n");
 		
 		
 		System.out.println();
