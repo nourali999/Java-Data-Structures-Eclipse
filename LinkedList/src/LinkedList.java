@@ -12,6 +12,8 @@ import java.util.NoSuchElementException;
 
 
 public class LinkedList<E> implements ListI<E>, Comparable<E>{
+	
+	
 
 	/* For our Linked List, we will
 	 * need a head and a tail pointer. We 
