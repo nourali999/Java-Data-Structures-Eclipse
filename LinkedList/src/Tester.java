@@ -28,12 +28,26 @@ public class Tester {
 		System.out.println("The minimum value is: "+list.returnMinValue());
 		
 		//Returns True if List Contains Object
-		System.out.println("Does the list contain 20: "+list.contains(20)+"\n");
+		System.out.println("Does the list contain 20: "+list.contains(20));
+		
+		//Adds 9 to end of list
+		list.addLast(9);
 		
 		
+		//prints list with the added 9 at end
+		for(Integer obj: list)
+			System.out.print(" "+obj);
+		
+		//Makes new line
 		System.out.println();
 		
+		//Removes Last duplicate
+		System.out.println("Remove the last duplicate/copy of "
+		   +list.removeLastDuplicate(9)+":");
 		
+		for(Integer obj: list)
+			System.out.print(" "+obj);
+	
 		
 		
 		

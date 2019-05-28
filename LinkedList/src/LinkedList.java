@@ -133,8 +133,31 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 		}
 		return temp;
 	}
-
 	
+	@SuppressWarnings("unchecked")
+	public E removeLastDuplicate(E obj) { // Removes last duplicate in the list
+		Node<E> current=head;
+		Node<E> previous=null,pwhere=null,cwhere=null;
+		while (current!=null) {
+			if(((Comparable<E>) current.data).compareTo(obj)==0) {
+				cwhere=current;
+				pwhere=previous;	
+			}
+			previous=current;
+			current=current.next;
+		}
+		if(pwhere==null&&cwhere==null)
+			return null;
+		if(cwhere==null)
+			return removeLast();
+		if(pwhere==null) 
+			return removeFirst();
+		E temp = cwhere.data;
+		pwhere.next=cwhere.next;
+		currentSize--;
+		return temp;
+	}
+
 
 	@Override
 	public E peekFirst() {				//peeks at the fist element in our list
