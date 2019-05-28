@@ -119,7 +119,21 @@ public class LinkedList<E> implements ListI<E>, Comparable<E>{
 		}
 		return false;
 	}
-
+	//Merge two linked list using head
+	@SuppressWarnings("rawtypes")
+	public LinkedList mergeLinkedList(LinkedList list1, LinkedList list2){
+		if(list1.head==null&&list2.head==null)
+			return null;
+		
+		
+		
+		
+		
+		return list1;
+	}
+	
+	
+	
 	@SuppressWarnings("unchecked")
 	public E returnMinValue() {				// Returns Minimum Value in List
 		if(head==null) return null;
